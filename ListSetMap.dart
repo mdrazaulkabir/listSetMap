@@ -1,41 +1,40 @@
 
-
-/*Lists:
-1.The list holds multiple values in a single variable.
-  It is also called arrays. If you want to store multiple values
-  without creating multiple variables, you can use a list.
-2.Enclosed quare bracket[] */
-
 void main(){
 
-  print("This is list type:");
+    /*Lists:
+  1.The list holds multiple values in a single variable.
+    It is also called arrays. If you want to store multiple values
+    without creating multiple variables, you can use a list.
+  2.Enclosed quare bracket[] */
 
-   List person1=["kabir",'age',23,'cgp',3.9];
+   print("This is list type:");
+
+   List person1=["kabir",'age',23,'cgp',3.9];               //more useable
    print(person1);
 
-   List<String>person2=["kabir","kabir",'age','cgp'];
+   List<String>person2=["kabir","kabir",'age','cgp'];       //more useable
    print('$person2');
 
    List person3=<String>["kabir",'age','cgp'];
    print('$person3'); 
 
 
-    List<int>numberAll=[1,2,7,8,9,10];
-    print('${numberAll.isEmpty}');
+  List<int>numberAll=[1,2,7,8,9,10];
+  print('${numberAll.isEmpty}');
 
 
       /*Sets:
     1.An unordered collection of unique items is called set in dart.
-    2.Set must contian unique values 
+    2.Set must contian unique values         //vvi
     3.Don't print duplicate value 
     4.Encolsed curly bracket {}
     */
     print("This is Set type:");
     
-   Set person4={"kabir",'age',23,'cgp',3.9};
+   Set person4={"kabir",'age',23,'cgp',3.9};          
    print("$person4");
 
-   Set<String>person5={"kabir","kabir",'age','cgp'};
+   Set<String>person5={"kabir","kabir",'age','cgp'}; //there will be wrong because we not use unique value two kabir
    print('$person5');
 
    Set person6=<String>{"kabir",'age','cgp'};
@@ -45,7 +44,7 @@ void main(){
    /*Maps:
 1.In Dart, a map is an object where you can store data in key-value pairs.
 2.The key and value can be any type. 
-3.Key must be unique but value can occur multiple time
+3.Key must be unique but value can occur multiple time.           //vvi
 4.The map is defined by using curly bracket and comma separates each point 
 */  
 print("This is map:");
@@ -72,32 +71,7 @@ print("This is map:");
     print('$details3');
     
 
-
-
-
-
-   
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
