@@ -1,4 +1,4 @@
-
+import 'dart:io';
 void main(){
 
     /*Lists:
@@ -21,6 +21,18 @@ void main(){
 
   List<int>numberAll=[1,2,7,8,9,10];
   print('${numberAll.isEmpty}');
+  
+  // print("Enter some number for string type list:");
+  // List<String>checkValue=stdin.readLineSync()!.split('');
+  // print(checkValue);
+  // List<int>checkValue1=stdin.readLineSync()!
+  //   .split(' ')
+  //   .map(int.parse)
+  //   .toList();;
+  // print(checkValue1);
+
+  List<int> nums = stdin.readLineSync()!.split('').map(int.parse).toList();
+  print(nums);
 
 
       /*Sets:
@@ -29,16 +41,16 @@ void main(){
     3.Don't print duplicate value 
     4.Encolsed curly bracket {}
     */
-    print("This is Set type:");
+  //  print("This is Set type:");
     
-   Set person4={"kabir",'age',23,'cgp',3.9};          
-   print("$person4");
+  //  Set person4={"kabir",'age',23,'cgp',3.9};          
+  //  print("$person4");
 
-   Set<String>person5={"kabir","kabir",'age','cgp'}; //there will be wrong because we not use unique value two kabir
-   print('$person5');
+  //  Set<String>person5={"kabir","kabir",'age','cgp'}; //there will be wrong because we not use unique value two kabir
+  //  print('$person5');
 
-   Set person6=<String>{"kabir",'age','cgp'};
-   print('$person6'); 
+  //  Set person6=<String>{"kabir",'age','cgp'};
+  //  print('$person6'); 
 
 
    /*Maps:
@@ -47,7 +59,7 @@ void main(){
 3.Key must be unique but value can occur multiple time.           //vvi
 4.The map is defined by using curly bracket and comma separates each point 
 */  
-print("This is map:");
+    print("This is map:");
 
     var details={
       'name':"kabir",
@@ -69,6 +81,8 @@ print("This is map:");
       'cgp':4,
     };
     print('$details3');
+    print('Map key show: ${details3.keys}');
+    print('Map value show:${details3.values}');
     
 
 }
