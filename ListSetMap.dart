@@ -209,6 +209,10 @@ void main() {
   //  print('$person6'); 
 
 
+
+
+
+
    /*Maps:
 1.In Dart, a map is an object where you can store data in key-value pairs.
 2.The key and value can be any type. 
@@ -244,54 +248,144 @@ void main() {
 }
 
 
+/*
+Map In Dart:
+In a Map, data is stored as keys and values. In Map, each key must be unique. 
+They are similar to HashMaps and Dictionaries in other languages.
+
+How To Create Map In Dart:
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+print(countryCapital);
+//output:{USA: Washington, D.C., India: New Delhi, China: Beijing}
+//Note: Here Usa, India, and China are keys, and it must be unique.
+
+//Access Value From Key:
+print(countryCapital["USA"]);   Washington, D.C.
+}
+
+Map Properties In Dart           //vvi for map 
+Properties	Work:
+*keys:	To get all keys.
+*values:	To get all values.
+*isEmpty:	Return true or false.
+*isNotEmpty:	Return true or false.
+*length:	It returns the length of the Map.
+
+void main() {
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  print("All keys of Map: ${expenses.keys}");     (sun, mon, tue)
+  print("All values of Map: ${expenses.values}");   (3000, 3000, 3234)
+  print("Is Map empty: ${expenses.isEmpty}");    false
+  print("Is Map not empty: ${expenses.isNotEmpty}");  true
+  print("Length of map is: ${expenses.length}");   3
+}
+
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Adding New Item  add will be the last index
+  countryCapital['Japan'] = 'Tokio';  
+  print(countryCapital);
+  // Updating Item
+  countryCapital['USA'] = 'Washington, D.C.';
+  print(countryCapital);
+  //remove items
+  countryCapital.remove("USA");
+  print(countryCapital);
+}
 
 
 
-// void main(){
+Map Methods In Dart:            //vvi for map
+Some useful Map methods in dart.
 
-//   var person=['kabir','age',23,'cgp',3.9];
-//   print('$person');
-
-//   List person1=['kabir','age',23,'cgp',3.9];
-//   print('$person1');
-
-
-//   List <String> name1=['kabir','kabir2','kabir3','kabir4'];
-//   print('$name1');
-
-//   List name2=<String>['kabir','kabir2','kabir3','kabir4'];
-//   print('$name2');
-  
-// }
+Properties	Work:    
+* keys.toList()	Convert all Maps keys to List.
+* values.toList()	Convert all Maps values to List.
+* containsKey(‘key’)	Return true or false.
+* containsValue(‘value’)	Return true or false.
+* clear()	Removes all elements from the Map.
+* removeWhere()	Removes all elements from the Map if condition is valid.
 
 
 
+Convert Maps Keys & Values To List:
+void main() {
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  // Without List
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+  // With List    //vvi
+  print("All keys of Map with List: ${expenses.keys.toList()}");
+  print("All values of Map with List: ${expenses.values.toList()}");
+}
+output:
+All keys of Map: (sun, mon, tue)
+All values of Map: (3000, 3000, 3234)
+All keys of Map with List: [sun, mon, tue]
+All values of Map with List: [3000, 3000, 3234]
 
 
 
+Looping Over Element Of Map:
+You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
+void main(){
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+ // Loop Through Map
+  for(MapEntry book in book.entries){   //for (var book1 in book.entries)
+    print('Key is ${book.key}, value ${book.value}');
+  }
+}
+
+
+Looping In Map Using For Each:
+void main(){
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+ // Loop Through For Each
+  book.forEach((key,value)=> print('Key is $key and value is $value'));
+}
 
 
 
+Remove Where In Dart Map:
+In this example, you will see how to get students whose marks are greater or equal to 32 using where method.
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+  mathMarks.removeWhere((key, value) => value < 32);
+  print(mathMarks);
+}
 
 
-
-
-
-
-
-/*Sets:
-1.An unordered collection of unique items is called set in dart.
-2.Set must contian unique values 
-3.Encolsed curly bracket {}
- 
-*/
-
-
-
-/*Maps:
-1.In Dart, a map is an object where you can store data in key-value pairs.
-2.The key and value can be any type. 
-3.Key must be unique but value can occur multiple time
-4.The map is defined by using curly bracket and comma separates each point 
 
  */
